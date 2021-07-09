@@ -1,0 +1,22 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# HPM_Particle_Sensor
+#
+DEF HPM_Particle_Sensor U 0 40 Y Y 1 F N
+F0 "U" 0 0 50 H V C CNN
+F1 "HPM_Particle_Sensor" 0 0 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -200 -100 50 -900 0 1 0 N
+X Vout 1 150 -150 100 L 50 50 1 1 w
+X Vcc 2 150 -250 100 L 50 50 1 1 W
+X RES 5 150 -550 100 L 50 50 1 1 I
+X TX 6 150 -650 100 L 50 50 1 1 O
+X RX 7 150 -750 100 L 50 50 1 1 I
+X GND 8 150 -850 100 L 50 50 1 1 U
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name arduino_micro_shield)(type Legacy)(uri ${KIPRJMOD}/arduino_micro_shield-master/arduino_micro_shield.lib)(options "")(descr ""))
+)
