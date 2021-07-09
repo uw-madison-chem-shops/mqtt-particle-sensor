@@ -1,0 +1,4 @@
+*.mpy
+settings.py
+*false/*
+*.swp

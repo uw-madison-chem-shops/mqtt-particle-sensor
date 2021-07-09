@@ -1,0 +1,8 @@
+WIFI_SSID = "ssid"
+WIFI_PASSWORD = "password"
+
+MQTT_BROKER = "mqtt.chem.wisc.edu"
+MQTT_USERNAME = "username"
+MQTT_PASSWORD = "password"
+
+DEVICE_ID = "id"
