@@ -9,11 +9,7 @@ echo "sleeping"
 sleep 5
 echo "putting files on device"
 ampy -p /dev/ttyUSB0 put main.py
-python3 -m mpy_cross settings.py
-ampy -p /dev/ttyUSB0 put settings.mpy
-python3 -m mpy_cross hpm.py
-ampy -p /dev/ttyUSB0 put hpm.mpy
-python3 -m mpy_cross sgp30.py
-ampy -p /dev/ttyUSB0 put sgp30.mpy
+ampy -p /dev/ttyUSB0 put settings.py
+ampy -p /dev/ttyUSB0 put hpm.py
 read -p "reset device and press enter"
 echo "done!"

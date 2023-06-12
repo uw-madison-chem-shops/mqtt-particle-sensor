@@ -1,6 +1,6 @@
-# mqtt-particle-sensor firmware
+# mqtt-weather-station firmware
 
-This project uses C with [Arduino IDE](https://www.arduino.cc/en/software/) and [micropython](https://micropython.org/), specifically [microhomie](https://github.com/microhomie/microhomie). Currently we build on microhomie-esp8266-v3.0.2, the binary is in the folder.
+This project uses [micropython](https://micropython.org/), specifically [microhomie](https://github.com/microhomie/microhomie). Currently we build on microhomie-esp8266-v3.0.2, the binary is in the folder.
 
 You must define the private information defined in `settings.py`. Copy `settings.py.example` to make a folder `settings.py` and define all relevant variables.
 
