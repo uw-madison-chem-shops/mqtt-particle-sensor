@@ -1,5 +1,23 @@
-# kohler-mqtt-air-quality-sensor
-This repository contains the current firmware, kicad diagram, and mounting plate.
-The current state of the device is functional. The Arduino Micro communicates with the Honeywell Particle Sensor and sends that data over I2C to the ESP2866 through the logic level converter. And then the ESP8266 retrieves the data from the Arduino over I2C and connects to the MQTT server and publishes data.
+# MQTT particle sensor
 
-The google sheet kohler-air-quality is up to date with hours and parts.
+Designed to work with [mqtt.chem.wisc.edu](https://mqtt.chem.wisc.edu/).
+
+## Repository
+
+This is an open source hardware project licensed under the CERN Open Hardware Licence Version 2 - Permissive.
+Please see the LICENSE file for the complete license.
+
+## PCB
+
+This PCB was designed using KiCAD version 7.
+Refer to `mqtt_particle_sensor.pdf` for schematic.
+PCB images generated with [tracespace](https://github.com/tracespace/tracespace) follow.
+
+<img src="./mqtt_particle_sensor-.top.svg" width="100%"/>
+<img src="./mqtt_particle_sensor-.bottom.svg" width="100%"/>
+
+## Firmware
+
+This project uses [micropython](https://micropython.org/), specifically [microhomie](https://github.com/microhomie/microhomie).
+Refer to the "firmware" directory in this repository for detailed instructions.
+
