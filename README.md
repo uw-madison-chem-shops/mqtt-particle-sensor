@@ -37,7 +37,10 @@ PCB images generated with [tracespace](https://github.com/tracespace/tracespace)
 | A1             | ESP8266 HUZZAH BREAKOUT BOARD | Adafruit | 2471 |  $10.00 | [Newark](https://www.newark.com/adafruit/2471/adafruit-huzzah-esp8266-breakout/dp/98Y0121?ost=esp8266+huzzah+breakout+board&cfm=true)        |
 | U1             | Auto Reset Timer | Nexperia  | HEF4060BT,653 | $0.50      |[Newark](https://www.newark.com/nexperia/hef4060bt-653/ic-4000-locmos-smd-4060-soic16/dp/25M9620?st=hef4060bt,653)        |
 | U2             | ATtiny85      | Microchip Technology| ATTINY85-20PU| $3.00       | [Newark](https://www.newark.com/microchip/attiny85-20pu/microcontroller-mcu-8-bit-attiny/dp/68T3808?ost=attiny85-20pu)|
+| U2             | 8pin Dip Socket | Millmax | 110-93-308-41-001000| $1.00 | [Newark](https://www.newark.com/mill-max/110-93-308-41-001000/dip-socket-8-position-through/dp/17C2295?ost=110-93-308-41-001000)|
 | U3             | HPM Particle Sensor | Honeywell  | 	HPMA115S0-XXX| $63.75      |  [Newark](https://www.newark.com/honeywell/hpma115s0-xxx/particle-sensor-laser-uart-5v/dp/24AC9030?st=hpm%20particle%20sensor)       |
+| U3             | Header Connector    | Molex      | 53047-0810    | $0.14 | [Newark](https://www.newark.com/molex/53047-0810/connector-header-8pos-1row-1-25mm/dp/98K9826?st=53047-0810)|
+| U3             | 8pin ribbon cable   | Molex      | 151340801 | $10.06 | [Newark](https://www.newark.com/molex/15134-0801/cable-assy-8pos-rcpt-rcpt-100mm/dp/01AC7007?ost=151340801)|
 | D1             | LED (red)          |  Lite-On Inc. | LTST-C230KRKT | $0.25      | [Digikey](https://www.digikey.com/en/products/detail/liteon/LTST-C230KRKT/386857?s=N4IgTCBcDaIDIBUDKCC0BhMBmADAaQCU8EQBdAXyA)        |
 | D2             | LED (green)         |  Lite-On Inc | LTST-C150KGKT| $0.25      | [Digikey](https://www.digikey.com/en/products/detail/liteon/LTST-C150KGKT/365085?s=N4IgTCBcDaIDIBUDKCC0BhAjAVgAwGkBxfBEAXQF8g)        |
 | PS1            | Power         | CUI   | VXO7805-500-M-TR | $3.00      |[Newark](https://www.newark.com/cui/vxo7805-500-m-tr/dc-dc-converter-fixed-5v-rohs/dp/13AJ1536?ost=vxo7805-500-m-tr)        |
