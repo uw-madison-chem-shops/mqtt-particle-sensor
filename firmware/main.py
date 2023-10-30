@@ -28,8 +28,7 @@ class ParticleSensor(HomieNode):
     def __init__(self, name="hpm", device=None):
         super().__init__(id="hpm", name=name, type="sensor")
         self.device = device
-        self.i2c = I2C(scl=Pin(5), sda=Pin(4))
-        #self.sensor = Sensor()
+        self.sensor = Sensor()
         self.pm25 = HomieNodeProperty(
             id="pm25",
             name="pm25",
@@ -84,9 +83,9 @@ class ParticleSensor(HomieNode):
                 self.last_online = time.time()
                 self.online_led.on()
                 self.led.value(0)  # illuminate onboard LED
-                #measured = self.sensor.read()
-                #self.pm25.data = str(measured["pm25"])
-                #self.pm10.data = str(measured["pm10"])
+                measured = self.sensor.read()
+                self.pm25.data = str(measured["pm25"])
+                self.pm10.data = str(measured["pm10"])
                 self.uptime.data = self.get_uptime()
                 self.ip.data = network.WLAN().ifconfig()[0]
                 self.led.value(1)  # onboard LED off

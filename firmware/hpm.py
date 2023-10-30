@@ -1,14 +1,13 @@
-from machine import UART
+from machine import I2C, Pin
+import struct
 
 
 class Sensor(object):
 
     def __init__(self):
-        self.ser = UART(0, 9600)
-        self.ser.init(9600, bits=8, parity=None, stop=1)
+        self.i2c = I2C(scl=Pin(5), sda=Pin(4))
 
     def read(self):
-        self.ser.write("\x68\x01\x04\x93")  # message to read
-        out = self.ser.read(32)
-        pm25, pm10 = struct.unpack_from(">hh", out[6:10])
+        out = self.i2c.readfrom(16, 4)
+        pm25, pm10 = struct.unpack_from(">hh", out)
         return {"pm25":pm25, "pm10":pm10}
