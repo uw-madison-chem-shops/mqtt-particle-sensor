@@ -9,5 +9,6 @@ class Sensor(object):
 
     def read(self):
         out = self.i2c.readfrom(16, 4)
-        pm25, pm10 = struct.unpack_from(">hh", out)
+        pm25, pm10 = struct.unpack_from(">HH", out)
+        print(pm25, pm10)
         return {"pm25":pm25, "pm10":pm10}

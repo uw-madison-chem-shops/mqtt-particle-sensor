@@ -66,6 +66,8 @@ class ParticleSensor(HomieNode):
         self.led = Pin(0, Pin.OUT)
         self.online_led = Pin(15, Pin.OUT)
         self.online_led.off()
+        self.tiny_reset = Pin(2, Pin.OUT)
+        self.tiny_reset.on()
         self.last_online = time.time()
         self.start = time.time()
         loop = get_event_loop()
@@ -80,15 +82,25 @@ class ParticleSensor(HomieNode):
         # loop forever
         while True:
             while self.device.mqtt.isconnected():
+                print("hello world")
                 self.last_online = time.time()
                 self.online_led.on()
                 self.led.value(0)  # illuminate onboard LED
-                measured = self.sensor.read()
+                try:
+                    measured = self.sensor.read()
+                except OSError:
+                    print("oserror")
+                    await sleep_ms(1000)
+                    continue
                 self.pm25.data = str(measured["pm25"])
                 self.pm10.data = str(measured["pm10"])
                 self.uptime.data = self.get_uptime()
                 self.ip.data = network.WLAN().ifconfig()[0]
                 self.led.value(1)  # onboard LED off
+                print("resetting tiny")
+                self.tiny_reset.off()  # low resets tiny
+                await sleep_ms(100)
+                self.tiny_reset.on()
                 await sleep_ms(15_000)
             while not self.device.mqtt.isconnected():
                 if time.time() - self.last_online > 300:   # 5 minutes
